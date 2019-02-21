@@ -36,6 +36,10 @@ data:
       http: {{ default "0.0.0.0:5556" .Values.config.web.http }}
     grpc:
       addr: {{ default "0.0.0.0:5557" .Values.config.grpc.addr }}
+      tlsCert: {{ .Values.config.grpc.tlsCert }}
+      tlsKey: {{ .Values.config.grpc.tlsKey }}
+      tlsClientCA: {{ .Values.config.grpc.tlsClientCA }}
+
     frontend:
       theme: {{ default "coreos" .Values.config.frontend.theme }}
 

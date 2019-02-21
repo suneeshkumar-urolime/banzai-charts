@@ -69,7 +69,10 @@ config:
     http: ""
 
   grpc:
-    addr: ""
+    addr: 0.0.0.0:5557
+    tlsCert: /etc/dex/tls/https/server/tls.crt
+    tlsKey: /etc/dex/tls/https/server/tls.key
+    tlsClientCA: /etc/dex/tls/https/ca/tls.crt
 
   frontend:
     theme: ""
